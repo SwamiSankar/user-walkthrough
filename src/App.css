@@ -1,38 +1,223 @@
-.App {
-  text-align: center;
+body{
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  background-color: rgb(232,236,244);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container{
+  position: relative;
+  height: 100%;
+  padding-bottom: 10rem;
+  width: 80vw;
+  background-color: white;
+  margin: 5rem auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  display: inline-flex;
+  position: relative;
+  padding-left: 32.25rem;
+  margin-top: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header img{
+  height: 47px;
+}
+
+header h3{
+  margin-block-start: 8px;
+  font-size: 1.6em;
+}
+
+.initial-page-container, .link-page-container , .user-page-container{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 40%;
+  width: 80%;
+  /* padding-top: 5.8rem; */
+  margin-top: 5rem;
+
+}
+
+.initial-page-container h3,.link-page-container h3,.user-page-container h3{
+  font-size: 1.9rem;
+    padding-left: 10.2rem;
+}
+
+.initial-page-container h4 ,.link-page-container h4,.user-page-container h4{
+  margin-left: 8.5rem;
+  margin-top: 0px;
+  opacity: 0.4;
+}
+
+.initial-page-display-label , .workspace-url-label{
+  
+  margin-top: 25px;
+}
+
+.initial-page-container label , .link-page-container label{
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.initial-page-fields , .link-page-fields{
+  display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 9.813rem;
+}
+
+.initial-page-fields input , .link-page-fields input{
+  border-radius: 1px;
+  border: 1px solid rgba(235, 232, 232, 0.799);
+  width: 400px;
+    height: 40px;
+}
+
+.initial-page-fields input::placeholder , .link-page-fields input::placeholder{
+  padding-left: 5px;
+  opacity: 0.5;
+}
+
+.submit{
+  margin-top: 25px;
+  height: 40px;
+  background-color: rgb(102,77,229);
+  color: rgb(237,235,253);
+  border-radius: 7px;
+  font-weight: 600;
+
+}
+
+.RSPBprogressBar{
+  width: 37%;
+  margin-top: 30px;
+  /* top: 11%; */
+  left: 30%;
+}
+
+.indexedStep{
   color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  background-color: rgba(211, 211, 211, 0.8);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.indexedStep.accomplished {
+  background-color: rgb(102,77,229);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+span.link-page-url{
+  border: 1px solid rgb(248,249,252);
+  background-color: rgb(248,249,252);
+  display: inline-block;
+  font-weight: 200;
+  height: 32px;
 }
+
+.workspace-name-field{
+  width: 410px;
+}
+
+.linkpage-url-field{
+width: 280px;
+}
+
+.link-page-fields{
+  margin-left: 10.913rem;
+}
+
+.user-card-heading{
+  opacity: 1;
+}
+
+.solo-user-card-container , .group-user-card-container{
+  border: 1px solid rgba(216, 211, 211, 0.35);
+  border-radius: 4px;
+   
+  height: 220px;
+  width: 220px;
+  display: block;
+}
+
+.solo-user-card-container img , .group-user-card-container img{
+  margin-left: 26px;
+  margin-top: 20px;
+}
+
+.solo-user-card-container h4 , .group-user-card-container h4{
+  margin-left: 23px;
+    opacity: 1;
+}
+
+.solo-user-card-container p , .group-user-card-container p{
+  opacity: 0.5;
+  margin-left: 19px;
+}
+
+.user-page-container h4:first-child{
+  margin-left: 160px;
+}
+
+.user-cards-container{
+  margin-top: 35px;
+  margin-left: 16.313rem;
+  display: inherit;
+  gap: 5rem;
+}
+
+.solo-user-card-container:focus , .group-user-card-container:focus{
+ border:  1px solid rgb(102,77,229);
+}
+
+.user-page-container .submit{
+  width: 32.625rem;
+  margin-left: 16.375rem;
+  margin-top: 57px;
+}
+
+.success-page-container{
+  margin-top: 100px;
+  margin-left: 563px;
+}
+
+.success-page-container h3{
+  margin-left: -110px;
+  font-size: 28px;
+}
+
+.success-page-container h4{
+  opacity: 0.4;
+  margin-left: -181px;
+
+}
+
+.success-page-container button{
+  width: 422px;
+    margin-left: -158px;
+    margin-top: 10px;
+
+}
+
+
+.success-logo{
+  width: 80px;
+}
+
+input:focus::placeholder{
+  color: transparent;
+}
+
+input:invalid{
+  border: 2px solid red;
+}
+
+
