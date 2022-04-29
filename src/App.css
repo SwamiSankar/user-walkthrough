@@ -231,6 +231,351 @@ input:focus::placeholder{
     color: #D8000C;
 }
 
+.disabled{
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+@media(max-width : 900px){
+  .header {
+    display: inline-flex;
+    position: relative;
+    margin-left: 37.65%;
+    margin-top: 50px;
+}
+.initial-page-container, .link-page-container, .user-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40%;
+  width: 90%;
+
+  margin-top: 5rem;
+}
+.initial-page-container h3, .link-page-container h3, .user-page-container h3 {
+  font-size: 1.8rem;
+  padding-left: 8.2rem;
+}
+.initial-page-container h4, .link-page-container h4, .user-page-container h4 {
+  margin-left: 5.8rem;
+  margin-top: 0px;
+  opacity: 0.4;
+}
+.initial-page-fields, .link-page-fields {
+  display: flex;
+  flex-direction: column;
+  width: 41%;
+  margin-top: 30px;
+  margin-left: 0.313rem;
+}
+.initial-page-fields input, .link-page-fields input {
+  border-radius: 1px;
+  border: 1px solid rgba(235, 232, 232, 0.799);
+  width: 150%;
+  height: 40px;
+}
+.submit{
+  width: 340px;
+}
+
+.user-cards-container {
+  margin-top: 35px;
+  margin-left: 50%;
+  width: 90%;
+  display: inherit;
+  flex-direction: column;
+}
+
+.solo-user-card-container, .group-user-card-container {
+  border: 1px solid rgba(216, 211, 211, 0.35);
+  border-radius: 4px;
+  height: 220px;
+  width: 220px;
+  display: block;
+  margin-top: 10px;
+}
+
+.initial-page-container h4, .link-page-container h4, .user-page-container h4:first-child {
+  margin-left: 3.8rem;
+  margin-top: 0px;
+  opacity: 0.45;
+}
+
+.solo-user-card-container img, .group-user-card-container img {
+  margin-left: 75px;
+  margin-top: 20px;
+}
+
+.solo-user-card-container p, .group-user-card-container p {
+  opacity: 0.5;
+  margin-left: 19px;
+}
+
+.solo-user-card-container h4 , .group-user-card-container h4{
+  margin-left: 60px;
+  opacity: 1;
+}
+
+
+
+.user-page-container .submit {
+  width: 53%;
+  margin-left: 6%;
+  margin-top: 57px;
+}
+
+.success-page-container {
+  margin-top: 100px;
+  margin-left: 41%;
+  width: 80%;
+}
+
+.success-page-container h3 {
+  margin-left: -20%;
+  width: 65%;
+  font-size: 28px;
+}
+
+.success-page-container h4 {
+  opacity: 0.4;
+  width: 101%;
+  margin-left: -33%;
+}
+
+.success-page-container button {
+  width: 55%;
+  margin-left: -18%;
+  margin-top: 10px;
+}
+
+
+}
+
+
+
+@media (max-width : 600px) {
+  .header {
+    display: inline-flex;
+    position: relative;
+    margin-left: 33.25%;
+    margin-top: 50px;
+}
+.RSPBprogressBar {
+  width: 55%;
+  margin-top: 30px;
+ 
+  left: 22%;
+}
+.initial-page-container h3, .link-page-container h3 {
+  font-size: 1.3rem;
+  padding-left: 92px;
+  width: 99%;
+}
+.initial-page-container h4, .link-page-container h4{
+  margin-left: 2.9rem;
+  margin-top: 0px;
+  opacity: 0.4;
+}
+
+.user-page-container h3{
+  font-size: 1.3rem;
+    padding-left: 67px;
+    width: 99%;
+}
+
+.user-page-container h4{
+  margin-left: 2.9rem;
+  width: 65%;
+  margin-top: 0px;
+  opacity: 0.4;
+
+}
+
+.user-card-heading{
+  opacity: 1;
+    margin-left: 63px;
+}
+
+
+
+.initial-page-fields{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 30px;
+  margin-left: -57px;
+}
+
+.link-page-fields {
+  margin-left: -27%;
+}
+
+.initial-page-fields input, .link-page-fields input {
+  border-radius: 1px;
+  border: 1px solid rgba(235, 232, 232, 0.799);
+  width: 170%;
+  height: 40px;
+}
+
+.submit {
+  margin-top: 25px;
+  height: 40px;
+  background-color: rgb(102,77,229);
+  color: rgb(237,235,253);
+  border-radius: 7px;
+  font-weight: 600;
+  width: 175%;
+}
+
+.user-cards-container {
+  margin-top: 35px;
+    margin-left: 32%;
+    width: 90%;
+    display: inherit;
+    flex-direction: column;
+}
+
+.solo-user-card-container, .group-user-card-container {
+  border: 1px solid rgba(216, 211, 211, 0.35);
+  border-radius: 4px;
+  height: 220px;
+  width: 220px;
+  display: block;
+  margin-top: 5px;
+}
+
+.user-page-container .submit {
+  width: 90%;
+  margin-left: 10%;
+  margin-top: 50px;
+}
+
+.success-logo {
+  width: 80px;
+  margin-left: -21px;
+}
+
+.success-page-container h3 {
+  margin-left: -35%;
+  font-size: 23px;
+}
+
+.success-page-container h4 {
+  opacity: 0.4;
+  width: 100%;
+  margin-left: -35%;
+}
+
+.success-page-container button {
+  width: 86%;
+  margin-left: -34%;
+  margin-top: 10px;
+}
+
+
+
+}
+
+@media (max-width : 450px) {
+  .header{
+    display: inline-flex;
+    position: relative;
+    margin-left: 29.25%;
+    margin-top: 50px;
+  }
+  .RSPBprogressBar {
+    width: 57%;
+    margin-top: 30px;
+    left: 21%;
+}
+.initial-page-container > h3,.link-page-container  > h3, .user-page-container > h3 {
+  font-size: 1.7rem;
+  margin-left: 7%;
+  padding-left: 38px;
+}
+
+.initial-page-container h4, .link-page-container h4, .user-page-container h4 {
+  margin-left: 3.3rem;
+    margin-top: 0px;
+    opacity: 0.4;
+}
+
+.initial-page-fields, .link-page-fields {
+  display: flex;
+  flex-direction: column;
+  width: 41%;
+  margin-top: 30px;
+  margin-left: -12%;
+}
+
+.initial-page-fields input, .link-page-fields input {
+  border-radius: 1px;
+  border: 1px solid rgba(235, 232, 232, 0.799);
+  width: 170%;
+  height: 40px;
+}
+
+.submit{
+  width: 181%;
+}
+
+.user-cards-container {
+  margin-top: 35px;
+  margin-left: 22%;
+  width: 90%;
+  display: inherit;
+  flex-direction: column;
+}
+
+.user-page-container .submit {
+  width: 94%;
+  margin-left: 25%;
+  margin-top: 42px;
+}
+
+.solo-user-card-container, .group-user-card-container {
+  border: 1px solid rgba(216, 211, 211, 0.35);
+  border-radius: 4px;
+  height: 220px;
+  width: 220px;
+  display: block;
+  margin-top: 10px;
+}
+
+.success-logo {
+  margin-left: 31px;
+  width: 80px;
+}
+
+.success-page-container {
+  margin-top: 100px;
+  margin-left: 25%;
+  width: 80%;
+}
+
+.success-page-container h3 {
+  margin-left: -17%;
+  width: 45%;
+  font-size: 28px;
+}
+
+.success-page-container h4 {
+  opacity: 0.4;
+  width: 100%;
+  margin-left: -17%;
+}
+
+.success-page-container button {
+  width: 100%;
+  margin-left: -18%;
+  margin-top: 10px;
+}
+
+}
+
+
+
+
 
 
 

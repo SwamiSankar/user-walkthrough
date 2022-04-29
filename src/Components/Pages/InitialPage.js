@@ -93,7 +93,9 @@ const InitialPage = () => {
           <span className="error-message">This is a required field</span>
         ) : null}
         <button
-          className="btn submit"
+          className={`btn submit ${
+            !input.isValid || !fullName.isValid ? 'disabled' : ''
+          }`}
           onClick={onClick}
           disabled={!input.isValid || !fullName.isValid}
         >
