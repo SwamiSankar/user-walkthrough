@@ -16,7 +16,7 @@ body{
 .header{
   display: inline-flex;
   position: relative;
-  padding-left: 32.25rem;
+  margin-left: 42.25%;
   margin-top: 50px;
 }
 
@@ -64,15 +64,21 @@ header h3{
 
 .initial-page-fields , .link-page-fields{
   display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    margin-left: 9.813rem;
+  flex-direction: column;
+  width: 41%;
+  margin-top: 30px;
+  margin-left: 9.813rem;
 }
+.initial-page-display-field.invalid ,.initial-page-name-field.invalid,.workspace-name-field.invalid ,.link-page-url-field.invalid{
+  border: 2px solid red;
+}
+
+
 
 .initial-page-fields input , .link-page-fields input{
   border-radius: 1px;
   border: 1px solid rgba(235, 232, 232, 0.799);
-  width: 400px;
+  width: 100%;
     height: 40px;
 }
 
@@ -169,9 +175,10 @@ width: 280px;
 
 .user-cards-container{
   margin-top: 35px;
-  margin-left: 16.313rem;
+  margin-left: 50%;
+  width: 90%;
   display: inherit;
-  gap: 5rem;
+  gap: 9%;
 }
 
 .solo-user-card-container:focus , .group-user-card-container:focus{
@@ -179,31 +186,34 @@ width: 280px;
 }
 
 .user-page-container .submit{
-  width: 32.625rem;
-  margin-left: 16.375rem;
+  width: 53%;
+  margin-left: 13%;
   margin-top: 57px;
 }
 
 .success-page-container{
   margin-top: 100px;
-  margin-left: 563px;
+  margin-left: 45%;
+  width: 80%;
 }
 
 .success-page-container h3{
-  margin-left: -110px;
+  margin-left: -10%;
+  width: 45%;
   font-size: 28px;
 }
 
 .success-page-container h4{
   opacity: 0.4;
-  margin-left: -181px;
+  width: 50%;
+  margin-left: -18%;
 
 }
 
 .success-page-container button{
-  width: 422px;
-    margin-left: -158px;
-    margin-top: 10px;
+  width: 49%;
+  margin-left: -18%;
+  margin-top: 10px;
 
 }
 
@@ -216,8 +226,11 @@ input:focus::placeholder{
   color: transparent;
 }
 
-input:invalid{
-  border: 2px solid red;
+.error-message{
+  margin-top: 4px;
+    color: #D8000C;
 }
+
+
 
 

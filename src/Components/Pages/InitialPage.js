@@ -1,9 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../../App';
+import { determineValidation } from '../../utils/validation';
 
 const InitialPage = () => {
-  const [input, setInput] = useState('');
-  const [fullName, setFullName] = useState('');
+  const [input, setInput] = useState({
+    value: '',
+    isValid: false,
+    isTouched: false,
+  });
+
+  const [fullName, setFullName] = useState({
+    value: '',
+    isValid: false,
+    isTouched: false,
+  });
   const { dispatch } = useContext(AppContext);
   const onClick = () => {
     dispatch({
@@ -11,10 +21,13 @@ const InitialPage = () => {
       data: {
         progress: 50,
         page: 2,
-        name: input,
+        name: input.value,
       },
     });
   };
+
+  console.log('Display Name', input);
+  console.log('Full Name', fullName);
 
   return (
     <div className="initial-page-container">
@@ -24,25 +37,65 @@ const InitialPage = () => {
         <label className="initial-page-name-label">Full Name</label>
         <input
           type="text"
-          className="initial-page-name-field"
+          className={`initial-page-name-field ${determineValidation(
+            fullName.isTouched,
+            fullName.isValid
+          )}`}
           placeholder="Steve Jobs"
           required
-          value={fullName}
-          onInput={(e) => setFullName(e.target.value)}
+          value={fullName.value}
+          onInput={(e) => {
+            if (e.target.value === '') {
+              return setFullName((prev) => ({
+                ...prev,
+                value: e.target.value,
+                isValid: false,
+              }));
+            }
+            return setFullName((prev) => ({
+              ...prev,
+              value: e.target.value,
+              isValid: true,
+            }));
+          }}
+          onBlur={() => setFullName((prev) => ({ ...prev, isTouched: true }))}
         />
+        {fullName.isTouched && !fullName.isValid ? (
+          <span className="error-message">This is a required field</span>
+        ) : null}
         <label className="initial-page-display-label">Display Name</label>
         <input
           type="text"
-          className="initial-page-display-field"
+          className={`initial-page-display-field ${determineValidation(
+            input.isTouched,
+            input.isValid
+          )}`}
           placeholder="Steve"
-          value={input}
+          value={input.value}
+          onChange={(e) => {
+            if (e.target.value === '') {
+              return setInput((prev) => ({
+                ...prev,
+                value: e.target.value,
+                isValid: false,
+              }));
+            }
+            return setInput((prev) => ({
+              ...prev,
+              value: e.target.value,
+              isValid: true,
+            }));
+          }}
+          onBlur={() => setInput((prev) => ({ ...prev, isTouched: true }))}
           required
-          onInput={(e) => setInput(e.target.value)}
         />
+        {input.isTouched && !input.isValid ? (
+          <span className="error-message">This is a required field</span>
+        ) : null}
         <button
           className="btn submit"
           onClick={onClick}
-          disabled={!input || !fullName}
+          disabled={!input.isValid || !fullName.isValid}
         >
           Create Workspace
         </button>
