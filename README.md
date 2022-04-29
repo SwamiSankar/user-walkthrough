@@ -4,9 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In this project, I have designed the Form using the mockup provided in the problem statement.
 
-Third Party Libraries used apart from react router dom :
-
-react-step-progress bar
+Third Party Libraries used apart from react router dom : react-step-progress bar
 
 Application hosted at **Vercel**
 
