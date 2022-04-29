@@ -3,6 +3,7 @@ import { AppContext } from '../../App';
 import UserCard from '../Cards/UserCard';
 
 const UserPage = () => {
+  //These steps are to prevent the & based XSS attack
   let encodedStr = 'Wikis, docs, tasks &amp; projects, all in one place';
 
   let parser = new DOMParser();
@@ -14,6 +15,7 @@ const UserPage = () => {
 
   const { state, dispatch } = useContext(AppContext);
 
+  //On click function dispatches the details to context object
   const onClick = () => {
     dispatch({
       type: 'PROGRESS_BAR',

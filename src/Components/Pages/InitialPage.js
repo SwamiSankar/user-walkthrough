@@ -3,18 +3,24 @@ import { AppContext } from '../../App';
 import { determineValidation } from '../../utils/validation';
 
 const InitialPage = () => {
+  //State for the display name field
   const [input, setInput] = useState({
     value: '',
     isValid: false,
     isTouched: false,
   });
 
+  //State for the full name field
   const [fullName, setFullName] = useState({
     value: '',
     isValid: false,
     isTouched: false,
   });
+
+  //Setting the values to the context object using dispatch
   const { dispatch } = useContext(AppContext);
+
+  //On click function dispatches the details to context object
   const onClick = () => {
     dispatch({
       type: 'PROGRESS_BAR',
@@ -25,9 +31,6 @@ const InitialPage = () => {
       },
     });
   };
-
-  console.log('Display Name', input);
-  console.log('Full Name', fullName);
 
   return (
     <div className="initial-page-container">

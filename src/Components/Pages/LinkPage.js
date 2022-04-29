@@ -5,17 +5,21 @@ import { determineValidation } from '../../utils/validation';
 const LinkPage = () => {
   const { state, dispatch } = useContext(AppContext);
 
+  //State for workspace field
   const [workspace, setWorkspace] = useState({
     value: '',
     isValid: false,
     isTouched: false,
   });
+
+  //State for url field
   const [url, setUrl] = useState({
     value: '',
     isValid: false,
     isTouched: false,
   });
 
+  //On click function dispatches the details to context object
   const onClick = () => {
     dispatch({
       type: 'PROGRESS_BAR',

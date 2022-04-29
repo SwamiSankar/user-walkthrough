@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { AppContext } from '../../App';
 
 const SuccessPage = () => {
+  //Getting the context state
   const { state } = useContext(AppContext);
   return (
     <div className="success-page-container">

@@ -7,7 +7,10 @@ import LinkPage from './Components/Pages/LinkPage';
 import SuccessPage from './Components/Pages/SuccessPage';
 import UserPage from './Components/Pages/UserPage';
 
+//Creating context API
 export const AppContext = React.createContext();
+
+//Setting the initial values for contents inside the context
 const initialState = {
   progressBar: {
     progress: 25,
@@ -16,6 +19,7 @@ const initialState = {
   },
 };
 
+//Reducer for the context
 const reducer = (state, action) => {
   switch (action.type) {
     case 'PROGRESS_BAR':
@@ -26,11 +30,13 @@ const reducer = (state, action) => {
       return initialState;
   }
 };
+
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [pageNumber, setPageNumber] = useState(1);
   const [progressPercentage, setprogressPercentage] = useState(25);
 
+  //Function to display page number based on the page number passed from context
   const switchPage = (page) => {
     switch (page) {
       case 1:
@@ -46,6 +52,8 @@ function App() {
         return null;
     }
   };
+
+  //Renders upon state change
   useEffect(() => {
     setPageNumber(state.progressBar.page);
     setprogressPercentage(state.progressBar.progress);
