@@ -67,11 +67,7 @@ const LinkPage = () => {
           </span>
           <input
             type="text"
-            className={`link-page-url-field ${determineValidation(
-              url.isTouched,
-              url.isValid
-            )}`}
-            required
+            className="link-page-url-field"
             value={url.value}
             onInput={(e) => {
               if (e.target.value === '') {
@@ -89,14 +85,11 @@ const LinkPage = () => {
             }}
             onBlur={() => setUrl((prev) => ({ ...prev, isTouched: true }))}
           />
-          {url.isTouched && !url.isValid ? (
-            <span className="error-message">This is a required field</span>
-          ) : null}
         </div>
         <button
           className="btn submit"
           onClick={onClick}
-          disabled={!workspace.isValid || !url.isValid}
+          disabled={!workspace.isValid}
         >
           Create Workspace
         </button>
